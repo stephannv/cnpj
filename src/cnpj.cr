@@ -18,9 +18,11 @@ require "./cnpj/validator"
 struct CNPJ
   VERSION = "1.0.0"
 
+  # Raised when an invalid value is provided while initializing a CNPJ
   class InvalidValueError < ArgumentError
   end
 
+  # The raw value used to initialize the CNPJ
   getter value : String
 
   # Creates a `CNPJ` from a `String`.
@@ -68,5 +70,15 @@ struct CNPJ
   # ```
   def unformatted : String
     value.gsub(/[^A-Z0-9]/, "")
+  end
+
+  # Same as `#value`.
+  def to_s : String
+    @value
+  end
+
+  # Appends `#value` to *io*.
+  def to_s(io : IO) : Nil
+    @value.to_s(io)
   end
 end

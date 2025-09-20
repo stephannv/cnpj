@@ -34,12 +34,14 @@ cnpj = CNPJ.new("24.485.147/0001-87")
 cnpj.value       # => "24.485.147/0001-87"
 cnpj.formatted   # => "24.485.147/0001-87"
 cnpj.unformatted # => "24485147000187"
+cnpj.to_s        # => "24.485.147/0001-87"
 
 # With valid unformatted value
 cnpj = CNPJ.new("24485147000187")
 cnpj.value       # => "24485147000187"
 cnpj.formatted   # => "24.485.147/0001-87"
 cnpj.unformatted # => "24485147000187"
+cnpj.to_s        # => "24485147000187"
 ```
 
 A `CNPJ` object is designed to never hold an invalid value, so you can assume

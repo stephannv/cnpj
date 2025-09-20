@@ -11,6 +11,16 @@ describe CNPJ do
     end
   end
 
+  describe "#to_s" do
+    it "delegates to @value" do
+      cnpj = CNPJ.new("UP.FVU.R5W/0001-07")
+      cnpj.to_s.should eq "UP.FVU.R5W/0001-07"
+
+      output = String.build { |io| cnpj.to_s(io) }
+      output.should eq "UP.FVU.R5W/0001-07"
+    end
+  end
+
   describe "#initialize" do
     INVALID_VALUES.each do |value|
       context "with invalid value: #{value}" do
