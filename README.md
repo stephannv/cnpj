@@ -8,7 +8,9 @@ of legal entities. It's an 14-character sequence in the format
 XX.XXX.XXX/XXXX-00, where the last 2 digits are check digits, generated
 through an arithmetic operation on the first 12 digits.
 
-[API Reference](https://crystaldoc.info/github/stephannv/cnpj)
+## Links
+- [API Reference](https://crystaldoc.info/github/stephannv/cnpj)
+- [CPF](https://github.com/stephannv/cpf)
 
 ## Installation
 
