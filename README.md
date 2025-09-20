@@ -47,9 +47,9 @@ that a CNPJ object will always hold a valid value. If you try to initialize a
 CNPJ object with an invalid value, it will raise an exception:
 
 ```crystal
-CNPJ.new("11111111111111") # => raises `ArgumentError`
+CNPJ.new("11111111111111") # => raises `CNPJ::InvalidValueError`
 
-CNPJ.new("11.111.111/1111-11") # => raises `ArgumentError`
+CNPJ.new("11.111.111/1111-11") # => raises `CNPJ::InvalidValueError`
 ```
 
 To safely initialize a CNPJ object, use the `.parse` method:
