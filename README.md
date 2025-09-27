@@ -1,3 +1,7 @@
+> [!WARNING]
+> This repository is no longer maintained. Development will continue in the [gunbolt/cpf_cnpj](https://codeberg.org/gunbolt/cpf_cnpj)
+> project, which provides the same features with expanded support for both CPF and CNPJ identifiers, along with database and serialization integrations.
+
 # CNPJ
 
 CNPJ identifier validation and formatting for Crystal already compatible
